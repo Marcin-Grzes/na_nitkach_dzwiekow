@@ -18,6 +18,7 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
 }
 
 a {
@@ -57,10 +58,9 @@ table {
 }
 
 .nav {
-  position: absolute;
+  position: sticky;
   width: 100vw;
   z-index: 100;
-  border: 1px solid red;
 }
 .nav__items--destkop {
   display: none;
@@ -466,48 +466,5 @@ table {
     display: none;
   }
 }
-/*   nav {
-         position: fixed;
-         top: 0;
-         padding: 2em;
-         width: 100%;
-         text-align: center;
-         background-color: #000;
-       }
-
-nav a {
- margin: 0 2em;
- text-decoration: none;
- font-size: 1rem;
- color: #e5e5e5;
-}
-
-nav {
-     position: sticky;
-     top: 0;
-     height: 60px;
-     line-height: 60px;
-     background-color: #ddd;
-     text-align: center;
-     z-index: 10;
-   }
-
-.burger-icon {
- display: block;
- margin-left: auto;
- padding: 0 30px;
- line-height: 60px;
- font-size: 30px;
- background: none;
- border: none;
- cursor: pointer;
-}
-.burger-icon:hover {
- color: blue;
-}
-
-.nav-items {
- display: none;
-}*/
 
 /*# sourceMappingURL=style.css.map */
