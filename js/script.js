@@ -1,6 +1,7 @@
 const navMobile = document.querySelector('.nav__items-mobile');
 const navBTN = document.querySelector('.hamburger');
 const allNavItems = document.querySelectorAll('.nav__item--mobile');
+const footerYear = document.querySelector('.footer__year')
 
 const handleNavMobile = () => {
     navBTN.classList.toggle('is-active');
@@ -57,4 +58,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+
 navBTN.addEventListener('click', handleNavMobile);
+
+const handleCurrentYear = () => {
+    footerYear.innerText = (new Date()).getFullYear();
+}
+handleCurrentYear();
