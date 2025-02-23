@@ -60,8 +60,7 @@ table {
 .nav__items--destkop {
   display: none;
 }
-
-.nav__items--mobile {
+.nav__items-mobile {
   position: fixed;
   top: 0;
   right: 0;
@@ -92,10 +91,9 @@ table {
   transition: transform 0.5s;
   z-index: 100;
 }
-.nav__items--mobile--active {
+.nav__items-mobile--active {
   transform: translateX(100%);
 }
-
 .nav__item {
   font-weight: bolder;
   font-size: 2rem;
@@ -226,21 +224,419 @@ table {
   }
 }
 @media (min-width: 992px) {
+  .nav {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
   .nav__items--destkop {
-    box-shadow: 10px 10px 20px 5px darkgoldenrod;
+    /*box-shadow: 10px 10px 20px 5px darkgoldenrod;
     line-height: 60px;
     border-radius: 10px;
     left: 50%;
     transform: translateX(-50%);
     position: fixed;
-    display: inline-block;
+    display: inline-block;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
   .nav__item {
-    padding: 0.4em;
+    padding: 0.2em;
     color: gold;
   }
   .nav .hamburger {
     display: none;
+  }
+}
+.about-therapy {
+  padding: 6rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.about-therapy::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  opacity: 0.1;
+  z-index: 1;
+}
+.about-therapy__title {
+  font-size: 6rem;
+  margin: 3rem 0 5rem;
+  text-align: center;
+  color: darkgoldenrod;
+  font-family: "DynaPuff", sans-serif;
+  position: relative;
+  z-index: 2;
+}
+.about-therapy__container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+.about-therapy__box {
+  margin-bottom: 2rem;
+}
+.about-therapy__subtitle {
+  font-family: "DynaPuff", sans-serif;
+  font-size: 2.8rem;
+  color: #b8860b;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-left: 2rem;
+}
+.about-therapy__subtitle::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 3rem;
+  background-color: goldenrod;
+  border-radius: 4px;
+}
+.about-therapy__text {
+  font-size: 2.4rem;
+  line-height: 1.8;
+  font-family: "Indie Flower", sans-serif;
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+.about-therapy__list {
+  list-style-type: none;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+.about-therapy__list-item {
+  font-size: 2.2rem;
+  line-height: 1.7;
+  font-family: "Indie Flower", sans-serif;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 3rem;
+}
+.about-therapy__list-item::before {
+  content: "♪";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: goldenrod;
+  font-size: 2.5rem;
+}
+.about-therapy__benefits {
+  margin-bottom: 3rem;
+}
+.about-therapy .benefits-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+@media (min-width: 768px) {
+  .about-therapy .benefits-container {
+    flex-direction: row;
+    gap: 4rem;
+  }
+}
+.about-therapy .benefits-box {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 20px rgba(184, 134, 11, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.about-therapy .benefits-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(184, 134, 11, 0.25);
+}
+.about-therapy .benefits-box__title {
+  font-family: "DynaPuff", sans-serif;
+  font-size: 2.4rem;
+  color: #b8860b;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.about-therapy .benefits-box__list {
+  list-style-type: none;
+}
+.about-therapy .benefits-box__item {
+  font-size: 2rem;
+  line-height: 1.7;
+  font-family: "Indie Flower", sans-serif;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 3rem;
+}
+.about-therapy .benefits-box__item::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: goldenrod;
+  font-size: 2.2rem;
+}
+.about-therapy__for-whom {
+  margin-bottom: 4rem;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  padding: 3rem;
+  border-left: 5px solid goldenrod;
+}
+.about-therapy__conclusion {
+  margin-top: 4rem;
+  text-align: center;
+}
+.about-therapy .cta-container {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+}
+.about-therapy .cta-button {
+  display: inline-block;
+  background: linear-gradient(135deg, goldenrod, #e6b422);
+  color: white;
+  font-family: "DynaPuff", sans-serif;
+  font-size: 2.2rem;
+  padding: 1.5rem 4rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.about-therapy .cta-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+  transition: left 0.5s ease;
+  z-index: -1;
+}
+.about-therapy .cta-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+.about-therapy .cta-button:hover::before {
+  left: 100%;
+}
+.about-therapy .cta-button:active {
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .about-therapy {
+    padding: 8rem 2rem;
+  }
+  .about-therapy__text {
+    font-size: 2.6rem;
+    line-height: 1.9;
+  }
+  .about-therapy__subtitle {
+    font-size: 3.2rem;
+  }
+  .about-therapy__list-item {
+    font-size: 2.4rem;
+  }
+  .about-therapy .benefits-box__item {
+    font-size: 2.2rem;
+  }
+}
+@media (min-width: 992px) {
+  .about-therapy {
+    padding: 10rem 2rem;
+  }
+  .about-therapy__container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .about-therapy__text {
+    font-size: 2.8rem;
+    line-height: 2;
+  }
+}
+.concerts {
+  padding: 6rem 1rem;
+  background: linear-gradient(135deg, rgb(255, 250, 230) 0%, rgb(255, 233, 170) 100%);
+  position: relative;
+  overflow: hidden;
+  /*.fade-in-element {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    will-change: opacity, tranform; // Optymalizacja wydajności
+
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }*/
+}
+.concerts__title {
+  font-size: 6rem;
+  margin: 3rem 0 5rem;
+  text-align: center;
+  color: darkgoldenrod;
+  font-family: "DynaPuff", sans-serif;
+  position: relative;
+  z-index: 2;
+}
+.concerts__container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+.concerts__box {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  padding: 3rem;
+  box-shadow: 0 8px 20px rgba(184, 134, 11, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.concerts__box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(184, 134, 11, 0.25);
+}
+.concerts__content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+@media (min-width: 768px) {
+  .concerts__content {
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
+  }
+}
+.concerts__text-container {
+  flex: 1;
+}
+.concerts__subtitle {
+  font-family: "DynaPuff", sans-serif;
+  font-size: 2.8rem;
+  color: #b8860b;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-left: 2rem;
+}
+.concerts__subtitle::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 3rem;
+  background-color: goldenrod;
+  border-radius: 4px;
+}
+.concerts__text {
+  font-size: 2.4rem;
+  line-height: 1.8;
+  font-family: "Indie Flower", sans-serif;
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+.concerts__list {
+  list-style-type: none;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+.concerts__list-item {
+  font-size: 2.2rem;
+  line-height: 1.7;
+  font-family: "Indie Flower", sans-serif;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 3rem;
+}
+.concerts__list-item::before {
+  content: "♪";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: goldenrod;
+  font-size: 2.5rem;
+}
+.concerts__image-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .concerts__image-container {
+    width: 40%;
+  }
+}
+.concerts__image-placeholder {
+  position: relative;
+  width: 100%;
+  padding-bottom: 75%;
+  background-color: rgba(218, 165, 32, 0.1);
+  border: 2px dashed goldenrod;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.concerts__image-placeholder:hover {
+  background-color: rgba(218, 165, 32, 0.2);
+}
+.concerts .image-placeholder-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(184, 134, 11, 0.8);
+  font-family: "Indie Flower", sans-serif;
+  font-size: 1.8rem;
+  text-align: center;
+  width: 80%;
+}
+@media (min-width: 768px) {
+  .concerts {
+    padding: 8rem 2rem;
+  }
+  .concerts__text {
+    font-size: 2.6rem;
+    line-height: 1.9;
+  }
+  .concerts__subtitle {
+    font-size: 3.2rem;
+  }
+  .concerts__list-item {
+    font-size: 2.4rem;
+  }
+}
+@media (min-width: 992px) {
+  .concerts {
+    padding: 10rem 2rem;
+  }
+  .concerts__container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .concerts__text {
+    font-size: 2.8rem;
+    line-height: 2;
   }
 }
 
