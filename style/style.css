@@ -103,7 +103,7 @@ table {
   text-align: center;
   color: black;
   text-transform: uppercase;
-  font-family: "Indie Flower", sans-serif;
+  font-family: "Original Surfer", sans-serif;
 }
 
 .nav .hamburger {
@@ -198,8 +198,8 @@ table {
   line-height: 2;
   text-align: center;
   color: #333;
-  font-family: "Indie Flower", sans-serif;
-  margin: 0;
+  font-family: "Original Surfer", sans-serif;
+  margin: 3rem;
 }
 
 @media (min-width: 768px) {
@@ -218,7 +218,7 @@ table {
     width: 50%;
   }
   .about-me__box-description--text {
-    font-family: "Indie Flower", sans-serif;
+    font-family: "Original Surfer", sans-serif;
     text-align: justify;
     font-size: 3rem;
     line-height: 2.2;
@@ -312,7 +312,7 @@ table {
 .about-therapy__text {
   font-size: 2.4rem;
   line-height: 1.8;
-  font-family: "Indie Flower", sans-serif;
+  font-family: "Original Surfer", sans-serif;
   margin-bottom: 2rem;
   text-align: justify;
 }
@@ -324,7 +324,7 @@ table {
 .about-therapy__list-item {
   font-size: 2.2rem;
   line-height: 1.7;
-  font-family: "Indie Flower", sans-serif;
+  font-family: "Original Surfer", sans-serif;
   margin-bottom: 1rem;
   position: relative;
   padding-left: 3rem;
@@ -376,7 +376,7 @@ table {
 .about-therapy .benefits-box__item {
   font-size: 2rem;
   line-height: 1.7;
-  font-family: "Indie Flower", sans-serif;
+  font-family: "Original Surfer", sans-serif;
   margin-bottom: 1.5rem;
   position: relative;
   padding-left: 3rem;
@@ -771,6 +771,11 @@ Koncerty
   font-size: 2.5rem;
 }
 .concerts__image-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.concerts__image-container img {
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
