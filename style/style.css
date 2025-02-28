@@ -71,22 +71,6 @@ table {
   align-items: center;
   flex-direction: column;
   background: linear-gradient(225deg, rgb(255, 223, 128), rgb(255, 170, 85), rgb(255, 120, 50));
-  /*    background: linear-gradient(to right,
-              rgb(255, 223, 128),  !* Ciepły złoty żółty *!
-              rgb(255, 170, 85),   !* Pomarańczowy *!
-              rgb(255, 120, 50),   !* Ciemniejszy pomarańcz *!
-              rgb(255, 80, 80),    !* Czerwono-różowy *!
-              rgb(204, 51, 153),   !* Różowy wpadający w fiolet *!
-              rgb(102, 51, 153)    !* Fioletowy odcień zmierzchu *!
-      );*/
-  /*    background: linear-gradient(to top,
-              rgb(102, 51, 153),   !* Głęboki fiolet (góra) *!
-              rgb(204, 51, 153),   !* Różowo-fioletowy *!
-              rgb(255, 80, 80),    !* Czerwonawy *!
-              rgb(255, 120, 50),   !* Pomarańczowy *!
-              rgb(255, 170, 85),   !* Jasnopomarańczowy *!
-              rgb(255, 223, 128)   !* Ciepły żółty (dół, blisko słońca) *!
-      );*/
   transform: translateX(0);
   transition: transform 0.5s;
   z-index: 100;
@@ -103,7 +87,7 @@ table {
   text-align: center;
   color: black;
   text-transform: uppercase;
-  font-family: "Original Surfer", sans-serif;
+  font-family: "Faculty Glyphic", sans-serif;
 }
 
 .nav .hamburger {
@@ -130,7 +114,7 @@ table {
 .header {
   position: relative;
   height: 100vh;
-  background-image: url("../img/header_small.jpg");
+  background-image: url("/img/header_small.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -153,7 +137,7 @@ table {
   color: white;
   text-transform: uppercase;
   font-size: 6rem;
-  font-family: "DynaPuff", sans-serif;
+  font-family: "Original Surfer", sans-serif;
   z-index: 10;
   text-align: center;
 }
@@ -162,15 +146,16 @@ table {
 }
 
 .about-me {
-  background: linear-gradient(135deg, rgb(255, 253, 240) 0%, rgb(255, 236, 179) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgb(255, 248, 227) 100%);
   padding: 2rem 1rem;
 }
 .about-me__title {
   font-size: 6rem;
   margin: 3rem;
   text-align: center;
-  color: darkgoldenrod;
-  font-family: "DynaPuff", sans-serif;
+  color: goldenrod;
+  font-family: "Original Surfer", sans-serif;
+  text-shadow: 0.5px 0.5px 0.5px saddlebrown;
 }
 .about-me__box {
   display: flex;
@@ -198,65 +183,13 @@ table {
   line-height: 2;
   text-align: center;
   color: #333;
-  font-family: "Original Surfer", sans-serif;
+  font-family: "Faculty Glyphic", sans-serif;
   margin: 3rem;
 }
 
-@media (min-width: 768px) {
-  .about-me__box {
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-  }
-  .about-me__box-img {
-    width: 50%;
-    max-width: 500px;
-    margin-bottom: 0;
-  }
-  .about-me__box-description {
-    width: 50%;
-  }
-  .about-me__box-description--text {
-    font-family: "Original Surfer", sans-serif;
-    text-align: justify;
-    font-size: 3rem;
-    line-height: 2.2;
-  }
-}
-@media (min-width: 992px) {
-  .nav {
-    background-color: rgba(0, 0, 0, 0.8);
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-  }
-  .nav__items--destkop {
-    /*box-shadow: 10px 10px 20px 5px darkgoldenrod;
-    line-height: 60px;
-    border-radius: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    position: fixed;
-    display: inline-block;*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-  .nav__item {
-    padding: 0.2em;
-    color: gold;
-  }
-  .nav .hamburger {
-    display: none;
-  }
-}
 .about-therapy {
   padding: 6rem 1rem;
-  background: linear-gradient(135deg, rgb(255, 253, 240) 0%, rgb(255, 236, 179) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgb(255, 248, 227) 100%);
   position: relative;
   overflow: hidden;
 }
@@ -275,8 +208,9 @@ table {
   font-size: 6rem;
   margin: 3rem 0 5rem;
   text-align: center;
-  color: darkgoldenrod;
-  font-family: "DynaPuff", sans-serif;
+  color: goldenrod;
+  font-family: "Original Surfer", sans-serif;
+  text-shadow: 0.5px 0.5px 0.5px saddlebrown;
   position: relative;
   z-index: 2;
 }
@@ -291,9 +225,9 @@ table {
   margin-bottom: 2rem;
 }
 .about-therapy__subtitle {
-  font-family: "DynaPuff", sans-serif;
+  font-family: "Original Surfer", sans-serif;
   font-size: 2.8rem;
-  color: #b8860b;
+  color: sienna;
   margin-bottom: 2rem;
   position: relative;
   padding-left: 2rem;
@@ -312,7 +246,7 @@ table {
 .about-therapy__text {
   font-size: 2.4rem;
   line-height: 1.8;
-  font-family: "Original Surfer", sans-serif;
+  font-family: "Faculty Glyphic", sans-serif;
   margin-bottom: 2rem;
   text-align: justify;
 }
@@ -324,7 +258,7 @@ table {
 .about-therapy__list-item {
   font-size: 2.2rem;
   line-height: 1.7;
-  font-family: "Original Surfer", sans-serif;
+  font-family: "Faculty Glyphic", sans-serif;
   margin-bottom: 1rem;
   position: relative;
   padding-left: 3rem;
@@ -353,7 +287,7 @@ table {
 }
 .about-therapy .benefits-box {
   flex: 1;
-  background: rgba(255, 255, 255, 0.5);
+  background: linear-gradient(135deg, rgb(255, 253, 240) 0%, rgb(255, 236, 179) 100%);
   border-radius: 15px;
   padding: 2.5rem;
   box-shadow: 0 8px 20px rgba(184, 134, 11, 0.15);
@@ -364,9 +298,9 @@ table {
   box-shadow: 0 12px 25px rgba(184, 134, 11, 0.25);
 }
 .about-therapy .benefits-box__title {
-  font-family: "DynaPuff", sans-serif;
+  font-family: "Original Surfer", sans-serif;
   font-size: 2.4rem;
-  color: #b8860b;
+  color: sienna;
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -376,7 +310,7 @@ table {
 .about-therapy .benefits-box__item {
   font-size: 2rem;
   line-height: 1.7;
-  font-family: "Original Surfer", sans-serif;
+  font-family: "Faculty Glyphic", sans-serif;
   margin-bottom: 1.5rem;
   position: relative;
   padding-left: 3rem;
@@ -391,7 +325,14 @@ table {
 }
 .about-therapy__for-whom {
   margin-bottom: 4rem;
-  background: rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, rgb(255, 253, 240) 0%, rgb(255, 236, 179) 100%);
+  border-radius: 15px;
+  padding: 3rem;
+  border-left: 5px solid goldenrod;
+}
+.about-therapy__contraindications {
+  margin-bottom: 4rem;
+  background: linear-gradient(135deg, rgb(255, 253, 240) 0%, rgb(255, 236, 179) 100%);
   border-radius: 15px;
   padding: 3rem;
   border-left: 5px solid goldenrod;
@@ -409,7 +350,7 @@ table {
   display: inline-block;
   background: linear-gradient(135deg, goldenrod, #e6b422);
   color: white;
-  font-family: "DynaPuff", sans-serif;
+  font-family: "Original Surfer", sans-serif;
   font-size: 2.2rem;
   padding: 1.5rem 4rem;
   border-radius: 50px;
@@ -442,231 +383,12 @@ table {
   transform: translateY(-2px);
 }
 
-@media (min-width: 768px) {
-  .about-therapy {
-    padding: 8rem 2rem;
-  }
-  .about-therapy__text {
-    font-size: 2.6rem;
-    line-height: 1.9;
-  }
-  .about-therapy__subtitle {
-    font-size: 3.2rem;
-  }
-  .about-therapy__list-item {
-    font-size: 2.4rem;
-  }
-  .about-therapy .benefits-box__item {
-    font-size: 2.2rem;
-  }
-}
-@media (min-width: 992px) {
-  .about-therapy {
-    padding: 10rem 2rem;
-  }
-  .about-therapy__container {
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  .about-therapy__text {
-    font-size: 2.8rem;
-    line-height: 2;
-  }
-}
-.business {
-  padding: 6rem 1rem;
-  background: linear-gradient(135deg, rgb(255, 253, 240) 0%, rgb(255, 236, 179) 100%);
-}
-.business__title {
-  font-size: 6rem;
-  margin: 3rem 0 5rem;
-  text-align: center;
-  color: darkgoldenrod;
-  font-family: "DynaPuff", sans-serif;
-}
-.business__container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.business__main-heading {
-  font-family: "DynaPuff", sans-serif;
-  font-size: 3.6rem;
-  color: #b8860b;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-.business__intro {
-  text-align: center;
-  margin-bottom: 6rem;
-}
-.business__intro-text {
-  font-family: "Indie Flower", sans-serif;
-  font-size: 2.4rem;
-  line-height: 1.8;
-  max-width: 800px;
-  margin: 0 auto 4rem;
-}
-.business__intro-graphic {
-  width: 100%;
-  height: 300px;
-  margin: 0 auto;
-  max-width: 800px;
-}
-.business__intro-graphic img {
-  width: 100%;
-  height: 300px;
-  margin: 0 auto;
-  max-width: 800px;
-}
-.business__subtitle {
-  font-family: "DynaPuff", sans-serif;
-  font-size: 2.8rem;
-  color: #b8860b;
-  margin-bottom: 3rem;
-  text-align: center;
-}
-.business .benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 3rem;
-  margin-bottom: 6rem;
-}
-.business .benefit-card {
-  background: rgba(255, 255, 255, 0.5);
-  padding: 2.5rem;
-  border-radius: 15px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-.business .benefit-card:hover {
-  transform: translateY(-5px);
-}
-.business .benefit-card__icon {
-  width: 6rem;
-  height: 6rem;
-  margin: 0 auto 2rem;
-  color: goldenrod;
-}
-.business .benefit-card p {
-  font-family: "Indie Flower", sans-serif;
-  font-size: 2rem;
-  line-height: 1.5;
-}
-.business .services-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 4rem;
-  margin-bottom: 6rem;
-}
-.business .service-card {
-  background: rgba(255, 255, 255, 0.5);
-  padding: 3rem;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(184, 134, 11, 0.15);
-  transition: transform 0.3s ease;
-}
-.business .service-card:hover {
-  transform: translateY(-5px);
-}
-.business .service-card__icon {
-  width: 5rem;
-  height: 5rem;
-  margin: 0 auto 2rem;
-  color: goldenrod;
-}
-.business .service-card__title {
-  font-family: "DynaPuff", sans-serif;
-  font-size: 2.4rem;
-  color: #b8860b;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-.business .service-card__list {
-  list-style: none;
-}
-.business .service-card__list li {
-  font-family: "Indie Flower", sans-serif;
-  font-size: 2rem;
-  line-height: 1.7;
-  margin-bottom: 1rem;
-  padding-left: 2.5rem;
-  position: relative;
-}
-.business .service-card__list li::before {
-  content: "♪";
-  position: absolute;
-  left: 0;
-  color: goldenrod;
-}
-.business .benefits-columns {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 4rem;
-  margin-bottom: 6rem;
-}
-.business .benefits-column {
-  background: rgba(255, 255, 255, 0.5);
-  padding: 3rem;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(184, 134, 11, 0.15);
-}
-.business .benefits-column__icon {
-  width: 5rem;
-  height: 5rem;
-  margin: 0 auto 2rem;
-  color: goldenrod;
-}
-.business .benefits-column__title {
-  font-family: "DynaPuff", sans-serif;
-  font-size: 2.4rem;
-  color: #b8860b;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-.business .benefits-column__list {
-  list-style: none;
-}
-.business .benefits-column__list li {
-  font-family: "Indie Flower", sans-serif;
-  font-size: 2rem;
-  line-height: 1.7;
-  margin-bottom: 1rem;
-  padding-left: 2.5rem;
-  position: relative;
-}
-.business .benefits-column__list li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: goldenrod;
-}
-.business__cta {
-  text-align: center;
-  margin-top: 4rem;
-}
-.business__cta .btn--primary {
-  display: inline-block;
-  background: linear-gradient(135deg, goldenrod, #e6b422);
-  color: white;
-  font-family: "DynaPuff", sans-serif;
-  font-size: 2.2rem;
-  padding: 1.5rem 4rem;
-  border-radius: 50px;
-  text-transform: uppercase;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.business__cta .btn--primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
-}
-
 /*=====================
 Koncerty
 =====================*/
 .concerts {
   padding: 6rem 1rem;
-  background: linear-gradient(135deg, rgb(255, 250, 230) 0%, rgb(255, 233, 170) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgb(255, 248, 227) 100%);
   position: relative;
   overflow: hidden;
   /*.fade-in-element {
@@ -685,8 +407,9 @@ Koncerty
   font-size: 6rem;
   margin: 3rem 0 5rem;
   text-align: center;
-  color: darkgoldenrod;
-  font-family: "DynaPuff", sans-serif;
+  color: goldenrod;
+  text-shadow: 0.5px 0.5px 0.5px saddlebrown;
+  font-family: "Original Surfer", sans-serif;
   position: relative;
   z-index: 2;
 }
@@ -698,7 +421,7 @@ Koncerty
   gap: 6rem;
 }
 .concerts__box {
-  background: rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, rgb(255, 253, 240) 0%, rgb(255, 236, 179) 100%);
   border-radius: 15px;
   padding: 3rem;
   box-shadow: 0 8px 20px rgba(184, 134, 11, 0.15);
@@ -724,9 +447,9 @@ Koncerty
   flex: 1;
 }
 .concerts__subtitle {
-  font-family: "DynaPuff", sans-serif;
+  font-family: "Original Surfer", sans-serif;
   font-size: 2.8rem;
-  color: #b8860b;
+  color: sienna;
   margin-bottom: 2rem;
   position: relative;
   padding-left: 2rem;
@@ -745,7 +468,7 @@ Koncerty
 .concerts__text {
   font-size: 2.4rem;
   line-height: 1.8;
-  font-family: "Indie Flower", sans-serif;
+  font-family: "Faculty Glyphic", sans-serif;
   margin-bottom: 2rem;
   text-align: justify;
 }
@@ -757,7 +480,7 @@ Koncerty
 .concerts__list-item {
   font-size: 2.2rem;
   line-height: 1.7;
-  font-family: "Indie Flower", sans-serif;
+  font-family: "Faculty Glyphic", sans-serif;
   margin-bottom: 1rem;
   position: relative;
   padding-left: 3rem;
@@ -775,11 +498,6 @@ Koncerty
   max-width: 400px;
   margin: 0 auto;
 }
-.concerts__image-container img {
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
-}
 @media (min-width: 768px) {
   .concerts__image-container {
     width: 40%;
@@ -790,8 +508,7 @@ Koncerty
   width: 100%;
   padding-bottom: 75%;
   background-color: rgba(218, 165, 32, 0.1);
-  border: 2px dashed goldenrod;
-  border-radius: 10px;
+  border-radius: 20px;
   overflow: hidden;
   transition: all 0.3s ease;
 }
@@ -804,10 +521,10 @@ Koncerty
   left: 50%;
   transform: translate(-50%, -50%);
   color: rgba(184, 134, 11, 0.8);
-  font-family: "Indie Flower", sans-serif;
+  font-family: "Faculty Glyphic", sans-serif;
   font-size: 1.8rem;
   text-align: center;
-  width: 80%;
+  width: 100%;
 }
 @media (min-width: 768px) {
   .concerts {
@@ -838,21 +555,213 @@ Koncerty
   }
 }
 
+.business {
+  padding: 6rem 1rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgb(255, 248, 227) 100%);
+}
+.business__title {
+  font-size: 6rem;
+  margin: 3rem 0 5rem;
+  text-align: center;
+  color: goldenrod;
+  text-shadow: 0.5px 0.5px 0.5px saddlebrown;
+  font-family: "Original Surfer", sans-serif;
+}
+.business__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.business__main-heading {
+  font-family: "Original Surfer", sans-serif;
+  font-size: 3.6rem;
+  color: sienna;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.business__intro {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+.business__intro-text {
+  font-family: "Faculty Glyphic", sans-serif;
+  font-size: 2.4rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+}
+.business__intro-graphic {
+  width: 100%;
+  height: 300px;
+  margin: 0 auto;
+  max-width: 800px;
+}
+.business__intro-graphic img {
+  width: 100%;
+  height: 300px;
+  margin: 0 auto;
+  max-width: 800px;
+}
+.business__subtitle {
+  font-family: "Original Surfer", sans-serif;
+  font-size: 2.8rem;
+  color: sienna;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.business .benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-bottom: 6rem;
+}
+.business .benefit-card {
+  background: linear-gradient(135deg, rgb(255, 253, 240) 0%, rgb(255, 236, 179) 100%);
+  padding: 2.5rem;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.business .benefit-card:hover {
+  transform: translateY(-5px);
+}
+.business .benefit-card__icon {
+  width: 6rem;
+  height: 6rem;
+  margin: 0 auto 2rem;
+  color: goldenrod;
+}
+.business .benefit-card p {
+  font-family: "Faculty Glyphic", sans-serif;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+.business .services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 4rem;
+  margin-bottom: 6rem;
+}
+.business .service-card {
+  background: linear-gradient(135deg, rgb(255, 253, 240) 0%, rgb(255, 236, 179) 100%);
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(184, 134, 11, 0.15);
+  transition: transform 0.3s ease;
+}
+.business .service-card:hover {
+  transform: translateY(-5px);
+}
+.business .service-card__icon {
+  width: 5rem;
+  height: 5rem;
+  margin: 0 auto 2rem;
+  color: goldenrod;
+}
+.business .service-card__title {
+  font-family: "Original Surfer", sans-serif;
+  font-size: 2.4rem;
+  color: sienna;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.business .service-card__list {
+  list-style: none;
+}
+.business .service-card__list li {
+  font-family: "Faculty Glyphic", sans-serif;
+  font-size: 2rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  padding-left: 2.5rem;
+  position: relative;
+}
+.business .service-card__list li::before {
+  content: "♪";
+  position: absolute;
+  left: 0;
+  color: sienna;
+}
+.business .benefits-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 4rem;
+  margin-bottom: 6rem;
+}
+.business .benefits-column {
+  background: linear-gradient(135deg, rgb(255, 253, 240) 0%, rgb(255, 236, 179) 100%);
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(184, 134, 11, 0.15);
+}
+.business .benefits-column__icon {
+  width: 5rem;
+  height: 5rem;
+  margin: 0 auto 2rem;
+  color: goldenrod;
+}
+.business .benefits-column__title {
+  font-family: "Original Surfer", sans-serif;
+  font-size: 2.4rem;
+  color: sienna;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.business .benefits-column__list {
+  list-style: none;
+}
+.business .benefits-column__list li {
+  font-family: "Faculty Glyphic", sans-serif;
+  font-size: 2rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  padding-left: 2.5rem;
+  position: relative;
+}
+.business .benefits-column__list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: goldenrod;
+}
+.business__cta {
+  text-align: center;
+  margin-top: 4rem;
+}
+.business__cta .btn--primary {
+  display: inline-block;
+  background: linear-gradient(135deg, goldenrod, #e6b422);
+  color: white;
+  font-family: "Original Surfer", sans-serif;
+  font-size: 2.2rem;
+  padding: 1.5rem 4rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.business__cta .btn--primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+/*===========================
+Praktyczne informacje
+===========================*/
 .practical-info {
   padding: 6rem 1rem;
-  background: linear-gradient(135deg, rgb(255, 253, 240) 0%, rgb(255, 236, 179) 100%);
 }
 .practical-info__title {
   font-size: 6rem;
   margin: 3rem 0 5rem;
   text-align: center;
-  color: darkgoldenrod;
-  font-family: "DynaPuff", sans-serif;
+  color: goldenrod;
+  text-shadow: 0.5px 0.5px 0.5px saddlebrown;
+  font-family: "Original Surfer", sans-serif;
 }
 .practical-info__main-subtitle {
-  font-family: "DynaPuff", sans-serif;
+  font-family: "Original Surfer", sans-serif;
   font-size: 3.2rem;
-  color: #b8860b;
+  color: sienna;
   text-align: center;
   margin-bottom: 4rem;
 }
@@ -867,7 +776,7 @@ Koncerty
   }
 }
 .practical-info .info-card {
-  background: rgba(255, 255, 255, 0.5);
+  background: linear-gradient(135deg, rgb(255, 253, 240) 0%, rgb(255, 236, 179) 100%);
   border-radius: 15px;
   padding: 3rem;
   box-shadow: 0 8px 20px rgba(184, 134, 11, 0.15);
@@ -895,15 +804,15 @@ Koncerty
   font-size: 2.5rem;
 }
 .practical-info .info-card__title {
-  font-family: "DynaPuff", sans-serif;
+  font-family: "Original Surfer", sans-serif;
   font-size: 2.4rem;
-  color: #b8860b;
+  color: sienna;
 }
 .practical-info .info-group {
   margin-bottom: 2rem;
 }
 .practical-info .info-group__title {
-  font-family: "Indie Flower", sans-serif;
+  font-family: "Faculty Glyphic", sans-serif;
   font-size: 2.2rem;
   color: #333;
   margin-bottom: 1rem;
@@ -913,7 +822,7 @@ Koncerty
   margin-left: 2rem;
 }
 .practical-info .info-group__list li {
-  font-family: "Indie Flower", sans-serif;
+  font-family: "Faculty Glyphic", sans-serif;
   font-size: 2rem;
   line-height: 1.7;
   margin-bottom: 1rem;
@@ -936,19 +845,19 @@ Koncerty
   margin-bottom: 3rem;
 }
 .practical-info__subtitle {
-  font-family: "DynaPuff", sans-serif;
+  font-family: "Original Surfer", sans-serif;
   font-size: 2.8rem;
-  color: #b8860b;
+  color: sienna;
   margin-bottom: 2rem;
 }
 .practical-info__text {
-  font-family: "Indie Flower", sans-serif;
+  font-family: "Faculty Glyphic", sans-serif;
   font-size: 2.2rem;
   line-height: 1.8;
   margin-bottom: 1.5rem;
 }
 .practical-info__text--important {
-  color: #b8860b;
+  color: sienna;
   font-weight: bold;
 }
 .practical-info__buttons {
@@ -963,7 +872,7 @@ Koncerty
 .practical-info .btn {
   margin-top: 3rem;
   display: inline-block;
-  font-family: "DynaPuff", sans-serif;
+  font-family: "Original Surfer", sans-serif;
   font-size: 2rem;
   padding: 1.5rem 3rem;
   border-radius: 50px;
@@ -1000,16 +909,20 @@ Koncerty
   }
 }
 
+/*================================
+Kontakt
+================================*/
 .contact {
   padding: 6rem 1rem;
-  background: linear-gradient(135deg, rgb(255, 253, 240) 0%, rgb(255, 236, 179) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgb(255, 248, 227) 100%);
 }
 .contact__title {
   font-size: 6rem;
   margin: 3rem 0 5rem;
   text-align: center;
-  color: darkgoldenrod;
-  font-family: "DynaPuff", sans-serif;
+  color: goldenrod;
+  text-shadow: 0.5px 0.5px 0.5px saddlebrown;
+  font-family: "Original Surfer", sans-serif;
 }
 .contact__container {
   display: flex;
@@ -1026,7 +939,7 @@ Koncerty
   flex: 1;
 }
 .contact__card {
-  background: rgba(255, 255, 255, 0.6);
+  background: linear-gradient(135deg, rgb(255, 253, 240) 0%, rgb(255, 236, 179) 100%);
   border-radius: 15px;
   padding: 3rem;
   box-shadow: 0 8px 20px rgba(184, 134, 11, 0.15);
@@ -1058,17 +971,15 @@ Koncerty
   flex: 1;
 }
 .contact__subtitle {
-  font-family: "DynaPuff", sans-serif;
+  font-family: "Original Surfer", sans-serif;
   font-size: 2.2rem;
-  color: #b8860b;
-  margin-bottom: 0.5rem;
+  color: sienna;
 }
 .contact__subtitle--map {
-  margin-bottom: 2rem;
   text-align: center;
 }
 .contact__text {
-  font-family: "Indie Flower", sans-serif;
+  font-family: "Faculty Glyphic", sans-serif;
   font-size: 2.4rem;
   color: #333;
 }
@@ -1089,28 +1000,25 @@ Koncerty
 }
 .contact__map-container {
   flex: 1;
-  padding: 2rem;
 }
 .contact__map {
   width: 100%;
-  height: 400px;
+  height: 375px;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(184, 134, 11, 0.15);
 }
 .contact__map-placeholder {
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
 .contact__map-placeholder p {
-  font-family: "Indie Flower", sans-serif;
+  font-family: "Faculty Glyphic", sans-serif;
   font-size: 2rem;
-  color: #b8860b;
+  color: sienna;
   padding: 2rem;
 }
 @media (max-width: 768px) {
@@ -1141,17 +1049,17 @@ Koncerty
   align-items: center;
 }
 .footer__copyright {
-  font-family: "Indie Flower", sans-serif;
+  font-family: "Faculty Glyphic", sans-serif;
   font-size: 1.8rem;
   color: #666;
   text-align: center;
 }
 .footer__copyright:hover {
-  color: #b8860b;
+  color: sienna;
 }
 .footer__year, .footer__owner {
   font-weight: bold;
-  color: #b8860b;
+  color: sienna;
 }
 .footer__rights {
   margin-left: 0.5rem;
@@ -1166,6 +1074,90 @@ Koncerty
   .footer__rights {
     display: block;
     margin-top: 0.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-me__box {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+  .about-me__box-img {
+    width: 50%;
+    max-width: 500px;
+    margin-bottom: 0;
+  }
+  .about-me__box-description {
+    width: 50%;
+  }
+  .about-me__box-description--text {
+    font-family: "Faculty Glyphic", sans-serif;
+    text-align: justify;
+    font-size: 2.5rem;
+    line-height: 1.7;
+  }
+}
+@media (min-width: 768px) {
+  .about-therapy {
+    padding: 8rem 2rem;
+  }
+  .about-therapy__text {
+    font-size: 2.6rem;
+    line-height: 1.9;
+  }
+  .about-therapy__subtitle {
+    font-size: 3.2rem;
+  }
+  .about-therapy__list-item {
+    font-size: 2.4rem;
+  }
+  .about-therapy .benefits-box__item {
+    font-size: 2.2rem;
+  }
+}
+@media (min-width: 992px) {
+  .nav {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+  .nav__items--destkop {
+    /*box-shadow: 10px 10px 20px 5px darkgoldenrod;
+    line-height: 60px;
+    border-radius: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: fixed;
+    display: inline-block;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .nav__item {
+    padding: 0.2em;
+    color: goldenrod;
+  }
+  .nav .hamburger {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .about-therapy {
+    padding: 10rem 2rem;
+  }
+  .about-therapy__container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .about-therapy__text {
+    font-size: 2.8rem;
+    line-height: 2;
   }
 }
 

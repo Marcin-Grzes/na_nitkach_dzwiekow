@@ -53,7 +53,7 @@
 </header>
 <main class="main">
     <!--===================SLIDER=========================-->
-    <section class="slider-background">
+    <!--<section class="slider-background">
         <div class="slider">
             <div class="slider__box">
                 <img src="img/events/gong.jpg" alt="Zdjęcie natury" class="slider__img">
@@ -61,10 +61,10 @@
                 <img src="img/events/DALL·E%202024-11-26%2020.32.48%20-%20A%20cozy%20massage%20room%20with%20a%20woman%20lying%20on%20her%20back%20on%20a%20soft%20yoga%20mat,%20covered%20with%20a%20delicate%20blanket.%20Around%20her%20are%20Tibetan%20singing%20bowls%20arranged%20.webp"
                      alt="Zdjęcie natury" class="slider__img">
             </div>
-            <button class="btn btn--left"><span>&lt;</span></button>
-            <button class="btn btn--right"><span>&gt;</span></button>
+            <button class="btn btn&#45;&#45;left"><span>&lt;</span></button>
+            <button class="btn btn&#45;&#45;right"><span>&gt;</span></button>
         </div>
-    </section>
+    </section>-->
     <!--===================O MNIE=========================-->
     <section class="about-me" id="about_me">
         <h2 class="about-me__title">O mnie</h2>
@@ -136,13 +136,22 @@
                         <h3 class="about-therapy__subtitle">Dla kogo?</h3>
                         <p class="about-therapy__text">Dla każdego, kto chce spróbować czegoś nowego, znaleźć chwilę spokoju i zadbać o swoje dobre samopoczucie. Nie musisz mieć żadnego doświadczenia – wystarczy, że przyjdziesz i pozwolisz dźwiękom działać.</p>
                     </div>
-
+                    <div class="about-therapy__contraindications">
+                        <h3 class="about-therapy__subtitle">Przeciwskazania:</h3>
+                        <h4 class="benefits-box__title"></h4>
+                        <ul class="benefits-box__list">
+                            <li class="benefits-box__item">Jesteś w ciąży (pierwszy trymestr)</li>
+                            <li class="benefits-box__item">Masz rozrusznik serca</li>
+                            <li class="benefits-box__item">Cierpisz na epilepsję</li>
+                            <li class="benefits-box__item">Masz poważne zaburzenia psychiczne</li>
+                        </ul>
+                    </div>
                     <div class="about-therapy__conclusion">
                         <p class="about-therapy__text">Kąpiel w dźwiękach to więcej niż relaks – to inwestycja w Twoje zdrowie i dobrostan. Każda sesja to podróż do świata harmonii, z której wracasz odnowiony, zrelaksowany i pełen pozytywnej energii.</p>
                         <p class="about-therapy__text">Pozwól sobie na ten wyjątkowy prezent dla ciała i duszy. Dołącz do grona osób, które odkryły moc dźwiękowej terapii i przekonaj się, jak głęboki relaks może zmienić Twoje życie.</p>
-                        <!--<div class="cta-container">
-                            <a href="#contact" class="cta-button">Zarezerwuj sesję</a>
-                        </div>-->
+                        <div class="cta-container">
+                            <a href="#contact" class="cta-button">Kontakt</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -159,20 +168,19 @@
                     <div class="fade-in-element">
                     <div class="concerts__content">
                         <div class="concerts__text-container">
-                            <h3 class="concerts__subtitle">Koncerty grupowe regularne</h3>
+                            <h3 class="concerts__subtitle">Regularne koncerty grupowe</h3>
                             <p class="concerts__text">Zanurz się w oceanie harmonijnych wibracji razem z innymi poszukiwaczami spokoju. Nasze regularne koncerty to przestrzeń, gdzie harmonia dźwięków łączy się z energią grupy.</p>
                             <ul class="concerts__list">
                                 <li class="concerts__list-item">Cotygodniowe sesje w kameralnej atmosferze</li>
-                                <li class="concerts__list-item">Profesjonalnie przygotowana przestrzeń z wygodnymi matami i kocami</li>
                                 <li class="concerts__list-item">60 minut głębokiego relaksu przy dźwiękach mis i gongu</li>
                                 <li class="concerts__list-item">Możliwość regularnej praktyki w przystępnej cenie</li>
-                                <li class="concerts__list-item">Stała społeczność ludzi dzielących pasję do świadomego odpoczynku</li>
+                                <li class="concerts__list-item">Społeczność ludzi dzielących pasję do świadomego odpoczynku</li>
                             </ul>
                         </div>
                         <div class="concerts__image-container">
                             <div class="concerts__image-placeholder">
-<!--                                <img src="img/IMG_0390-kopia.jpg" alt="zdjęcie grupowe">-->
-                                <span class="image-placeholder-text">Zdjęcie z koncertu grupowego</span>
+
+                                <span class="image-placeholder-text"><img src="img/group-small.jpeg" alt="zdjęcie grupowe"></span>
                             </div>
                         </div>
                     </div>
@@ -184,7 +192,7 @@
                     <div class="concerts__content">
                         <div class="concerts__image-container">
                             <div class="concerts__image-placeholder">
-                                <span class="image-placeholder-text">Zdjęcie z koncertu prywatnego</span>
+                                <span class="image-placeholder-text"><img src="img/sesja_indyw1.jpg" alt="zdjęcie koncertu w pomieszczeniu, są 2 osoby"></span>
                             </div>
                         </div>
                         <div class="concerts__text-container">
@@ -212,12 +220,12 @@
                                 <li class="concerts__list-item">Program dopasowany do Twoich indywidualnych potrzeb</li>
                                 <li class="concerts__list-item">Możliwość połączenia z konsultacją i wywiadem</li>
                                 <li class="concerts__list-item">Intensywniejsze doświadczenie wibracji</li>
-                                <li class="concerts__list-item">Idealne przy konkretnych dolegliwościach lub w terapii</li>
+                                <li class="concerts__list-item">Idealne przy konkretnych dolegliwościach lub we wspomaganiu terapii</li>
                             </ul>
                         </div>
                         <div class="concerts__image-container">
                             <div class="concerts__image-placeholder">
-                                <span class="image-placeholder-text">Zdjęcie z sesji indywidualnej</span>
+                                <span class="image-placeholder-text"><img src="img/indywidual-small1.jpg" alt="zdjęcie sesji indywidualnej"></span>
                             </div>
                         </div>
                     </div>
@@ -228,18 +236,17 @@
                     <div class="concerts__content">
                         <div class="concerts__image-container">
                             <div class="concerts__image-placeholder">
-                                <span class="image-placeholder-text">Zdjęcie z koncertu wyjazdowego</span>
+                                <span class="image-placeholder-text"><img src="img/zdj%20plenerowe2_small.jpg" alt="zdjęcie plenerowe"></span>
                             </div>
                         </div>
                         <div class="concerts__text-container">
                             <h3 class="concerts__subtitle">Koncerty wyjazdowe</h3>
-                            <p class="concerts__text">Przyjadę tam, gdzie nas potrzebujesz, przynosząc harmonię dźwięków do każdego miejsca.</p>
+                            <p class="concerts__text">Przyjadę tam, gdzie mnie potrzebujesz, przynosząc harmonię dźwięków do każdego miejsca.</p>
                             <ul class="concerts__list">
                                 <li class="concerts__list-item">Eventy firmowe i konferencje</li>
                                 <li class="concerts__list-item">Wydarzenia plenerowe i festiwale</li>
                                 <li class="concerts__list-item">Ośrodki wellness i SPA</li>
                                 <li class="concerts__list-item">Szkoły i centra edukacyjne</li>
-                                <li class="concerts__list-item">Kompleksowa organizacja wraz z nagłośnieniem i wyposażeniem</li>
                             </ul>
                         </div>
                     </div>
@@ -257,11 +264,12 @@
                                 <li class="concerts__list-item">Cykle edukacyjne o wpływie dźwięku na organizm</li>
                                 <li class="concerts__list-item">Specjalne koncerty przy pełni księżyca</li>
                                 <li class="concerts__list-item">Retreaty łączące dźwięk z innymi praktykami</li>
+                                <li class="concerts__list-item">Zwoływanie kobiecych kręgów</li>
                             </ul>
                         </div>
                         <div class="concerts__image-container">
                             <div class="concerts__image-placeholder">
-                                <span class="image-placeholder-text">Zdjęcie z warsztatów</span>
+                                <span class="image-placeholder-text"><img src="img/spec2.jpg" alt="zdjęcie grupowe"></span>
                             </div>
                         </div>
                     </div>
@@ -404,7 +412,7 @@
                     </div>
                 </div>
 
-                <!-- CTA -->
+<!--                 CTA-->
                 <!--<div class="business__cta">
                     <a href="#contact" class="btn btn&#45;&#45;primary">Umów konsultację</a>
                 </div>-->
@@ -444,10 +452,10 @@
                                 <h4 class="info-group__title">Akcesoria dodatkowe (opcjonalnie):</h4>
                                 <ul class="info-group__list">
                                     <li>Własna poduszka pod głowę (jeśli masz szczególne preferencje)</li>
-                                    <li>Śpiwór</li>
-                                    <li>Opaska na oczy/maska do spania</li>
+                                    <li>Własna mata</li>
+                                    <li>Śpiwór / koc</li>
+                                    <li>Opaska na oczy / maska do spania</li>
                                     <li>Butelka wody</li>
-                                    <li>Koc</li>
                                 </ul>
                             </div>
                         </div>
@@ -529,7 +537,7 @@
                     </div>
                     <div class="practical-info__buttons">
 <!--                        <a href="#contact" class="btn btn&#45;&#45;primary">Zarezerwuj miejsce</a>-->
-                        <a href="#contact" class="btn btn--secondary">Kontakt</a>
+<!--                        <a href="#contact" class="btn btn&#45;&#45;secondary">Kontakt</a>-->
                     </div>
                 </div>
             </div>
@@ -581,15 +589,15 @@
                     </div>
                 </div>
 
-               <!-- <div class="contact__map-container">
-                    <h3 class="contact__subtitle contact__subtitle&#45;&#45;map">Znajdź mnie</h3>
+                <div class="contact__map-container">
+<!--                    <h3 class="contact__subtitle contact__subtitle&#45;&#45;map">Znajdź mnie</h3>-->
                     <div class="contact__map">
-                        &lt;!&ndash; Tutaj wstawisz kod z Google Maps &ndash;&gt;
+                        <!-- Tutaj wstawisz kod z Google Maps -->
                         <div class="contact__map-placeholder">
-                            <p>Mapa</p>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2449.9719637033863!2d20.6620791466774!3d52.11663889987671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471949729aa0bc03%3A0x5c28aa464018e5e2!2zTmEgbml0a2FjaCBkxbp3acSZa8Ozdw!5e0!3m2!1spl!2spl!4v1740758402762!5m2!1spl!2spl" width="600" height="375" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
-                </div>-->
+                </div>
             </div>
         </div>
     </section>
