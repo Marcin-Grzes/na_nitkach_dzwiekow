@@ -7,6 +7,13 @@ const handleNavMobile = () => {
     navBTN.classList.toggle('is-active');
     navMobile.classList.toggle('nav__items-mobile--active');
 
+    // Aktualizacja stanu aria-expanded
+    const isExpanded = navBTN.getAttribute('aria-expanded') === 'true';
+    navBTN.setAttribute('aria-expanded', !isExpanded);
+
+    // Aktualizacja tekstu aria-label w zależności od stanu
+    navBTN.setAttribute('aria-label', isExpanded ? 'Otwórz menu' : 'Zamknij menu');
+
     handleNavAnimation()
 }
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Na nitkach dźwięków - relaksacyjne koncerty na misach dźwiękowych w Grodzisku
     Mazowieckim, Milanówku i okolicach">
@@ -27,7 +27,7 @@
         <a href="#contact" class="nav__item">Kontakt</a>
     </div>
 
-    <div class="nav__items-mobile nav__items-mobile--active">
+    <div class="nav__items-mobile nav__items-mobile--active" id="nav-mobile" >
         <a href="#about_me" class="nav__item nav__item--mobile">O mnie</a>
         <a href="#about_therapy" class="nav__item nav__item--mobile">O terapii dźwiękiem</a>
         <a href="#concerts" class="nav__item nav__item--mobile">Koncerty</a>
@@ -36,7 +36,7 @@
         <a href="#contact" class="nav__item nav__item--mobile">Kontakt</a>
     </div>
 
-    <button class="hamburger hamburger--emphatic" type="button">
+    <button class="hamburger hamburger--emphatic" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="nav-mobile">
   <span class="hamburger-box">
     <span class="hamburger-inner"></span>
   </span>
@@ -584,7 +584,14 @@
                     <div class="contact__map">
                         <!-- Tutaj wstawisz kod z Google Maps -->
                         <div class="contact__map-placeholder">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2449.9719637033863!2d20.6620791466774!3d52.11663889987671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471949729aa0bc03%3A0x5c28aa464018e5e2!2zTmEgbml0a2FjaCBkxbp3acSZa8Ozdw!5e0!3m2!1spl!2spl!4v1740758402762!5m2!1spl!2spl" width="600" height="375" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2449.9719637033863!2d20.6620791466774!3d52.11663889987671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471949729aa0bc03%3A0x5c28aa464018e5e2!2zTmEgbml0a2FjaCBkxbp3acSZa8Ozdw!5e0!3m2!1spl!2spl!4v1740758402762!5m2!1spl!2spl"
+                                    width="600"
+                                    height="375"
+                                    style="border:0;"
+                                    allowfullscreen=""
+                                    loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                    title="Mapa Google z lokalizacją Na nitkach dźwięków w Milanówku"></iframe>
                         </div>
                     </div>
                 </div>
