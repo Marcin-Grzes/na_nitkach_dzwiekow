@@ -64,6 +64,7 @@ table {
   max-width: 1200px;
 }
 
+
 // Navigation
 
 .nav {
@@ -75,16 +76,18 @@ table {
 
   // tło menu w wersji mobilnej
   &__items-mobile {
+    // position
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
+
+    background: linear-gradient(225deg, rgb(255, 223, 128), rgb(255, 170, 85), rgb(255, 120, 50));
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: linear-gradient(225deg, rgb(255, 223, 128), rgb(255, 170, 85), rgb(255, 120, 50));
     transform: translateX(0);
     transition: transform 0.5s;
     z-index: 100;
@@ -107,6 +110,7 @@ table {
     font-family: $main-font
   }
 }
+
 
 // pozycjonowqnie menu hamburgerowego
 .nav .hamburger {
