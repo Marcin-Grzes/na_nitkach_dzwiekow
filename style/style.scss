@@ -1,16 +1,11 @@
 @font-face {
   font-family: "Original Surfer";
-  src: url("/fonts/Original_Surfer/OriginalSurfer-Regular.ttf") format("truetype");
+  src: url("../fonts/Original_Surfer/OriginalSurfer-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
-@font-face {
-  font-family: "Faculty Glyphic";
-  src: url("/fonts/Faculty_glyphic/FacultyGlyphic-Regular.ttf") format("truetype");
-  font-weight: auto;
-  font-style: auto;
-}
+
 
 $head-font: "Original Surfer", sans-serif;
 $main-font: "Faculty Glyphic", sans-serif;
