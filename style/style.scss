@@ -19,6 +19,7 @@ $backgroud-subsection: linear-gradient(135deg, rgba(255,253,240,1) 0%, rgba(255,
 $main-color: goldenrod;
 $text-shadow: 0.5px 0.5px 0.5px saddlebrown;
 $symbol: '♪';
+$transformHover: transform 0.3s ease, box-shadow 0.3s ease;
 
 @mixin section-title {
   font-size: 6rem;
@@ -44,8 +45,6 @@ $symbol: '♪';
 @mixin section-subtitle-suplement {
   position: relative;
   padding-left: 2rem;
-
-
 
   &::before {
     content: '';
@@ -100,6 +99,20 @@ $symbol: '♪';
   font-family: $main-font;
   margin-bottom: 2rem;
   text-align: justify;
+}
+
+@mixin fade-animation {
+  .fade-in-element {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    will-change: opacity, transform; // Optymalizacja wydajności
+
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
 *,
@@ -396,7 +409,7 @@ table {
     border-radius: 15px;
     padding: 2.5rem;
     box-shadow: 0 8px 20px rgba(184, 134, 11, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: $transformHover;
 
     &:hover {
       @include card-hover-effect;
@@ -439,6 +452,11 @@ table {
     //background: rgba(255, 255, 255, 0.3);
     @include gradient-card;
     border-left: 5px solid goldenrod;
+    transition: $transformHover;
+
+    &:hover {
+      @include card-hover-effect;
+    }
   }
 
 // Sekcja przeciwskazania;
@@ -447,6 +465,11 @@ table {
     margin-bottom: 4rem;
     @include gradient-card;
     border-left: 5px solid goldenrod;
+    transition: $transformHover;
+
+    &:hover {
+      @include card-hover-effect;
+    }
   }
 
   // Sekcja zakończenia
@@ -502,6 +525,9 @@ table {
       transform: translateY(-2px);
     }
   }
+
+  // Fade animation
+  @include fade-animation;
 }
 
 /*=====================
@@ -531,7 +557,7 @@ Koncerty
     //background: rgba(255, 255, 255, 0.3);
     @include gradient-card;
     box-shadow: 0 8px 20px rgba(184, 134, 11, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: $transformHover;
 
     &:hover {
       @include card-hover-effect;
@@ -610,17 +636,7 @@ Koncerty
   }
 
   // Animacja fade-in
-  .fade-in-element {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-    will-change: opacity, transform; // Optymalizacja wydajności
-
-    &.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+  @include fade-animation;
 
   // Media Queries
   @media (min-width: 768px) {
@@ -814,6 +830,7 @@ Koncerty
     //background: rgba(255, 255, 255, 0.5);
     @include gradient-card;
     box-shadow: 0 8px 20px rgba(184, 134, 11, 0.15);
+    transition: $transformHover;
 
     &__icon {
       width: 5rem;
@@ -849,6 +866,9 @@ Koncerty
         }
       }
     }
+    &:hover {
+      @include card-hover-effect;
+    }
   }
 
   // CTA
@@ -866,7 +886,7 @@ Koncerty
       border-radius: 50px;
       text-transform: uppercase;
       box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: $transformHover;
 
       &:hover {
         transform: translateY(-3px);
@@ -874,6 +894,8 @@ Koncerty
       }
     }
   }
+  // Animations
+  @include fade-animation;
 }
 
 /*===========================
@@ -913,7 +935,7 @@ Praktyczne informacje
     //background: rgba(255, 255, 255, 0.5);
     @include gradient-card;
     box-shadow: 0 8px 20px rgba(184, 134, 11, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: $transformHover;
 
     &:hover {
       @include card-hover-effect;
@@ -1066,6 +1088,8 @@ Praktyczne informacje
       margin: 0 auto;
     }
   }
+  // Animacje
+  @include fade-animation;
 }
 /*================================
 Kontakt
@@ -1097,6 +1121,11 @@ Kontakt
     //background: rgba(255, 255, 255, 0.6);
     @include gradient-card;
     box-shadow: 0 8px 20px rgba(184, 134, 11, 0.15);
+    transition: $transformHover;
+
+    &:hover {
+      @include card-hover-effect;
+    }
   }
 
   &__item {
@@ -1392,12 +1421,14 @@ Kontakt
       line-height: 2;
     }
   }
+  //animations
+  @include fade-animation;
 }
 
 /* Styl dla obrazów ładowanych leniwie */
 .lazy-image {
   opacity: 0;
-  transition: opacity 0.5s ease-in-out; /* Dłuższy czas dla lepszej widoczności */
+  transition: opacity 1.5s ease-in-out; /* Dłuższy czas dla lepszej widoczności */
   width: 100%; /* Upewnienie się, że obrazy zajmują całą dostępną szerokość */
   height: auto;
   display: block; /* Usunięcie ewentualnych problemów z inlineowymi obrazkami */

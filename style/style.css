@@ -341,6 +341,11 @@ table {
   border-radius: 15px;
   padding: 3rem;
   border-left: 5px solid goldenrod;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.about-therapy__for-whom:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(184, 134, 11, 0.25);
 }
 .about-therapy__contraindications {
   margin-bottom: 4rem;
@@ -348,6 +353,11 @@ table {
   border-radius: 15px;
   padding: 3rem;
   border-left: 5px solid goldenrod;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.about-therapy__contraindications:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(184, 134, 11, 0.25);
 }
 .about-therapy__conclusion {
   margin-top: 4rem;
@@ -393,6 +403,16 @@ table {
 }
 .about-therapy .cta-button:active {
   transform: translateY(-2px);
+}
+.about-therapy .fade-in-element {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: opacity, transform;
+}
+.about-therapy .fade-in-element.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /*=====================
@@ -703,6 +723,7 @@ Koncerty
   border-radius: 15px;
   padding: 3rem;
   box-shadow: 0 8px 20px rgba(184, 134, 11, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .business .benefits-column__icon {
   width: 5rem;
@@ -734,6 +755,10 @@ Koncerty
   left: 0;
   color: goldenrod;
 }
+.business .benefits-column:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(184, 134, 11, 0.25);
+}
 .business__cta {
   text-align: center;
   margin-top: 4rem;
@@ -753,6 +778,16 @@ Koncerty
 .business__cta .btn--primary:hover {
   transform: translateY(-3px);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+.business .fade-in-element {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: opacity, transform;
+}
+.business .fade-in-element.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /*===========================
@@ -919,6 +954,16 @@ Praktyczne informacje
     margin: 0 auto;
   }
 }
+.practical-info .fade-in-element {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: opacity, transform;
+}
+.practical-info .fade-in-element.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /*================================
 Kontakt
@@ -954,6 +999,11 @@ Kontakt
   border-radius: 15px;
   padding: 3rem;
   box-shadow: 0 8px 20px rgba(184, 134, 11, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.contact__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(184, 134, 11, 0.25);
 }
 .contact__item {
   display: flex;
@@ -1175,11 +1225,21 @@ Kontakt
     font-size: 2.8rem;
     line-height: 2;
   }
+  .fade-in-element {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    will-change: opacity, transform;
+  }
+  .fade-in-element.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 /* Styl dla obrazów ładowanych leniwie */
 .lazy-image {
   opacity: 0;
-  transition: opacity 0.5s ease-in-out; /* Dłuższy czas dla lepszej widoczności */
+  transition: opacity 1.5s ease-in-out; /* Dłuższy czas dla lepszej widoczności */
   width: 100%; /* Upewnienie się, że obrazy zajmują całą dostępną szerokość */
   height: auto;
   display: block; /* Usunięcie ewentualnych problemów z inlineowymi obrazkami */
