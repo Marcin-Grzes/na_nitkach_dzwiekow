@@ -403,17 +403,6 @@ Koncerty
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgb(255, 248, 227) 100%);
   position: relative;
   overflow: hidden;
-  /*.fade-in-element {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-    will-change: opacity, tranform; // Optymalizacja wydajności
-
-    &.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }*/
 }
 .concerts__title {
   font-size: 6rem;
@@ -537,6 +526,16 @@ Koncerty
   font-size: 1.8rem;
   text-align: center;
   width: 100%;
+}
+.concerts .fade-in-element {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: opacity, transform;
+}
+.concerts .fade-in-element.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 @media (min-width: 768px) {
   .concerts {
@@ -1175,6 +1174,41 @@ Kontakt
   .about-therapy__text {
     font-size: 2.8rem;
     line-height: 2;
+  }
+}
+/* Styl dla obrazów ładowanych leniwie */
+.lazy-image {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+/* Opcjonalny styl dla placeholdera przed załadowaniem */
+.image-placeholder {
+  background-color: rgba(218, 165, 32, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+.image-placeholder::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(218, 165, 32, 0.05) 0%, rgba(218, 165, 32, 0.1) 50%, rgba(218, 165, 32, 0.05) 100%);
+  animation: shimmer 1.5s infinite;
+  background-size: 200% 100%;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
   }
 }
 

@@ -610,17 +610,17 @@ Koncerty
   }
 
   // Animacja fade-in
-  /*.fade-in-element {
+  .fade-in-element {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease, transform 0.8s ease;
-    will-change: opacity, tranform; // Optymalizacja wydajności
+    will-change: opacity, transform; // Optymalizacja wydajności
 
     &.visible {
       opacity: 1;
       transform: translateY(0);
     }
-  }*/
+  }
 
   // Media Queries
   @media (min-width: 768px) {
@@ -1394,4 +1394,42 @@ Kontakt
   }
 }
 
+/* Styl dla obrazów ładowanych leniwie */
+.lazy-image {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 
+  &.loaded {
+    opacity: 1;
+  }
+}
+
+
+/* Opcjonalny styl dla placeholdera przed załadowaniem */
+.image-placeholder {
+  background-color: rgba(218, 165, 32, 0.1);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+                    90deg,
+                    rgba(218, 165, 32, 0.05) 0%,
+                    rgba(218, 165, 32, 0.1) 50%,
+                    rgba(218, 165, 32, 0.05) 100%
+    );
+    animation: shimmer 1.5s infinite;
+    background-size: 200% 100%;
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
