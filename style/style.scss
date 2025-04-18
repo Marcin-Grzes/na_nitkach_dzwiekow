@@ -1475,3 +1475,15 @@ Kontakt
   0% { background-position: -200% 0; }
   100% { background-position: 200% 0; }
 }
+
+/* Style dla hamburger menu na jasnym tle (domyślne) */
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  transition: background-color 0.3s ease;
+}
+
+/* Style dla hamburger menu na ciemnym tle */
+.hamburger.on-dark-bg .hamburger-inner,
+.hamburger.on-dark-bg .hamburger-inner::before,
+.hamburger.on-dark-bg .hamburger-inner::after {
+  background-color: white;
+}

@@ -2,6 +2,21 @@ const navMobile = document.querySelector('.nav__items-mobile');
 const navBTN = document.querySelector('.hamburger');
 const allNavItems = document.querySelectorAll('.nav__item--mobile');
 const footerYear = document.querySelector('.footer__year')
+const header = document.querySelector('.header');
+
+// Funkcja zmieniająca kolor hamburger menu w zależności od tła
+const updateHamburgerColor = () => {
+    // Pobieramy pozycję przewijania i pozycję headera
+    const scrollY = window.scrollY;
+    const headerBottom = header.offsetTop + header.offsetHeight;
+    // Jeśli jesteśmy w obszarze headera, hamburger jest na ciemnym tle
+
+    if(scrollY < headerBottom) {
+        navBTN.classList.add('on-dark-bg');
+    } else {
+        navBTN.classList.remove('on-dark-bg');
+    }
+}
 
 const handleNavMobile = () => {
     navBTN.classList.toggle('is-active');
@@ -38,4 +53,10 @@ navBTN.addEventListener('click', handleNavMobile);
 const handleCurrentYear = () => {
     footerYear.innerText = (new Date()).getFullYear();
 }
+
+// Dodajemy nowy event listener do śledzenia przewijania
+window.addEventListener('scroll', updateHamburgerColor);
+
 handleCurrentYear();
+updateHamburgerColor(); // Wywołujemy od razu, aby ustawić właściwy kolor na start
+
