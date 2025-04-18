@@ -1,10 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Funkcja do inicjalizacji lazy-loadingu obrazów
     function initLazyLoading() {
-        console.log("Inicjalizacja lazy loading...");
         // Wybierz wszystkie obrazy z klasą lazy-image
         const lazyImages = document.querySelectorAll('.lazy-image');
-        console.log("Znaleziono obrazów: ", lazyImages.length);
 
         // Jeśli Intersection Observer API jest dostępne
         if ('IntersectionObserver' in window) {
@@ -12,16 +10,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 entries.forEach(function(entry) {
                     // Jeśli obraz jest widoczny
                     if (entry.isIntersecting) {
-                        console.log("Obraz w widoku: ", entry.target);
                         const img = entry.target;
                         // Załaduj właściwy obraz jeśli ma data-src
                         if (img.dataset.src) {
-                            console.log("Ładowanie obrazu: ", img.dataset.src);
                             img.src = img.dataset.src;
 
                             // Gdy obraz się załaduje, dodaj klasę 'loaded'
                             img.onload = function() {
-                                console.log("Obraz załadowany: ", img);
                                 img.classList.add('loaded');
 
                                 // Szukamy kontenera nadrzędnego dla obrazka
@@ -31,7 +26,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
                                 if (container) {
                                     container.classList.add('loaded');
-                                    console.log("Dodano klasę loaded do kontenera: ", container);
                                 }
                             };
                         }
@@ -48,12 +42,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Obserwuj każdy obraz z klasą lazy-image
             lazyImages.forEach(function(image) {
-                console.log("Obserwuję obraz: ", image);
                 imageObserver.observe(image);
             });
         } else {
             // Fallback dla przeglądarek, które nie obsługują Intersection Observer
-            console.log("Używam fallbacku dla przeglądarek bez IntersectionObserver");
             lazyLoadImagesFallback(lazyImages);
         }
     }
@@ -122,6 +114,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Inicjalizacja lazy-loadingu - upewnij się, że to się wykonuje
-    console.log("Rozpoczynam lazy loading...");
     initLazyLoading();
 });
