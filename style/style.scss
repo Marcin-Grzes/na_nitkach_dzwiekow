@@ -1524,5 +1524,7 @@ Kontakt
 
 /* Zachowujemy style dla aktywnego stanu */
 .hamburger.is-active {
-  background-color: rgba(255, 255, 255, 0.9); /* Bardziej nieprzezroczyste tło dla aktywnego menu */
+  //background-color: rgba(0, 0, 0, 0.4); /* Półprzezroczyste ciemne tło */
+  //box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Subtelny jasny cień */
+  background-color: rgba(255, 255, 255, 0.4); /* Bardziej nieprzezroczyste tło dla aktywnego menu */
 }
