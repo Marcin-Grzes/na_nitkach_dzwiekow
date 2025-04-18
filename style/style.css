@@ -1293,7 +1293,7 @@ Kontakt
 
 /* Dodanie tła do przycisku hamburger menu */
 .hamburger {
-  background-color: rgb(255, 255, 255); /* Półprzezroczyste białe tło */
+  background-color: rgba(255, 255, 255, 0.85); /* Półprzezroczyste białe tło */
   border-radius: 8px; /* Zaokrąglone rogi */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtelny cień */
   padding: 12px; /* Zwiększamy padding dla większej powierzchni kliknięcia */
